@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-    <script defer src="index.f26b3468.js"></script></head>
+    <script defer src="index.e3725cfe.js"></script></head>
     <body>
 
         <header>
@@ -24,10 +24,17 @@
             </div>
             <div class="add-scores">
                 <h2> Add your name</h2>
-                <form action="">
-                    <input type="text" placeholder="Your name">
-                    <input type="text" placeholder="Your score">
-                    <input type="button" placeholder="subit" >
+                <form id="form" action="post">
+                    <div>
+                        <input type="text" placeholder="Your name" id="name"
+                            class="name">
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Your score" id="score"
+                            class="score">
+                    </div>
+
+                    <button id="submit"> submit</button>
                 </form>
 
             </div>
