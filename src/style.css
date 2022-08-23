@@ -57,3 +57,21 @@ form {
 #submit {
   width: min-content;
 }
+
+.flex{
+  display: flex;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+
+.name-board {
+  border: 2px solid black;
+  padding: 1rem;
+}
+.name-board:nth-child(odd){
+ 
+}
+
+.child {
+  margin-left: 2px;
+}
