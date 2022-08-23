@@ -2,7 +2,6 @@
   "name": "leaderboard-app",
   "version": "1.0.0",
   "description": "This project is a web application thats displays the name and score of players using fetch data from API.",
-  
   "scripts": {
     "build": "webpack --mode development",
     "start": "webpack serve --open"
@@ -19,8 +18,8 @@
   },
   "homepage": "https://github.com/tarikbouari/LeaderBoard-App#readme",
   "devDependencies": {
-    "css-loader": "^6.7.1",
     "babel-eslint": "^10.1.0",
+    "css-loader": "^6.7.1",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.26.0",
