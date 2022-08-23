@@ -1,5 +1,5 @@
 import './style.css';
-import Scores from './functionaliies.js';
+import Scores from './functionalities.js';
 
 const refresh = document.getElementById('refresh');
 const submit = document.getElementById('submit');
