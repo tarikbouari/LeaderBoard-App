@@ -20,3 +20,22 @@ const renderScore = () => {
     container.innerHTML += load;
   });
 };
+
+submit.addEventListener("click", (e) => {
+  e.preventDefault();
+  const nameInpute = nameInput.value;
+  const scoreInpute = scoreInput.value;
+
+  if ((nameInpute && scoreInpute) === "") return "value missing";
+  // const newData = new Scores(nameInpute, scoreInpute);
+  // newData.addScore();
+  sendData({ 
+    "user": nameInpute,
+    "score": scoreInpute,
+  });
+  // container.innerHTML = '';
+  // renderScore();
+  form.reset();
+  return e;
+
+});
