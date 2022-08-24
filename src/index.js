@@ -45,4 +45,22 @@ const sendData = async (array) => {
   const storage = await res.json();
   console.log(storage);
 };
-  
+
+
+const getScore = async () => {
+  const res = await fetch(url);
+
+  const storage = await res.json();
+  // const dataScores = JSON.parse(storage);
+  storage.forEach((item) => {
+    const load = `<div class="flex"> 
+                        <li> ${item.user}: ${item.score}</li>
+                    <div>`;
+
+    container.innerHTML += load;
+  });
+};
+
+refresh.addEventListener("click", () => {
+  getScore();
+});
