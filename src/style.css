@@ -57,21 +57,34 @@ form {
   gap: 1rem;
 }
 
-#submit {
+button {
   width: min-content;
+  padding: 0.3rem 1rem;
 }
 
 .flex {
   display: flex;
   padding: 0.5rem;
-  border: 1px solid black;
 }
+
+
 
 .name-board {
   border: 2px solid black;
   padding: 1rem;
+  overflow: auto;
+  height: 300px;
 }
 
 .child {
   margin-left: 2px;
+}
+
+li {
+  list-style: none;
+}
+
+form input {
+  width: 70%;
+  padding: 0.3rem;
 }
