@@ -7,3 +7,11 @@ const fetchUrl = async () => {
       "https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/",
       {
         method: "POST",
+        body: JSON.stringify({
+            name: "Fifa Saison",
+          }),
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
+          },
