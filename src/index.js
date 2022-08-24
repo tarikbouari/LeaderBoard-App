@@ -9,8 +9,6 @@ const form = document.getElementById("form");
 const scoreInput = document.getElementById("score");
 
 const renderScore = () => {
-  const data = JSON.parse(localStorage.getItem("data")) || [];
-
   data.forEach((item) => {
     const load = `<div class="flex"> 
                         <h3> ${item.playerName}:<h3>
@@ -23,39 +21,28 @@ const renderScore = () => {
 
 submit.addEventListener("click", (e) => {
   e.preventDefault();
-  const nameInpute = nameInput.value;
-  const scoreInpute = scoreInput.value;
-
-  if ((nameInpute && scoreInpute) === "") return "value missing";
-  // const newData = new Scores(nameInpute, scoreInpute);
-  // newData.addScore();
-  sendData({ 
-    "user": nameInpute,
-    "score": scoreInpute,
+  if ((nameInput.value && scoreInput.value) === "") return "value missing";
+  sendData({
+    user: nameInput.value,
+    score: scoreInput.value,
   });
   // container.innerHTML = '';
-  // renderScore();
   form.reset();
   return e;
-
 });
 
 const sendData = async (array) => {
-  const res = await fetch( url, 
-  {
-    method : "Post",
+  const res = await fetch(url, {
+    method: "Post",
     body: JSON.stringify(array),
-    
+
     headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*',
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
     },
   });
   const storage = await res.json();
   console.log(storage);
-}
-
-refresh.addEventListener("click", () => {
-document.location.reload();
-});
+};
+  
