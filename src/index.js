@@ -8,17 +8,6 @@ const nameInput = document.getElementById("name");
 const form = document.getElementById("form");
 const scoreInput = document.getElementById("score");
 
-const renderScore = () => {
-  data.forEach((item) => {
-    const load = `<div class="flex"> 
-                        <h3> ${item.playerName}:<h3>
-                        <h3 class="child">${item.score}<h3>
-                    <div>`;
-
-    container.innerHTML += load;
-  });
-};
-
 submit.addEventListener("click", (e) => {
   e.preventDefault();
   if ((nameInput.value && scoreInput.value) === "") return "value missing";
@@ -26,7 +15,6 @@ submit.addEventListener("click", (e) => {
     user: nameInput.value,
     score: scoreInput.value,
   });
-  // container.innerHTML = '';
   form.reset();
   return e;
 });
@@ -46,13 +34,11 @@ const sendData = async (array) => {
   console.log(storage);
 };
 
-
 const getScore = async () => {
   const res = await fetch(url);
-
   const storage = await res.json();
-  // const dataScores = JSON.parse(storage);
-  storage.forEach((item) => {
+  const dataScores = storage.result;
+  dataScores.forEach((item) => {
     const load = `<div class="flex"> 
                         <li> ${item.user}: ${item.score}</li>
                     <div>`;
@@ -61,6 +47,9 @@ const getScore = async () => {
   });
 };
 
+getScore();
+
 refresh.addEventListener("click", () => {
+  container.innerHTML ='';
   getScore();
 });
