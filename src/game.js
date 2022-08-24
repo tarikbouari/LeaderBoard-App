@@ -15,3 +15,10 @@ const fetchUrl = async () => {
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*',
           },
+        });
+        const storage = await res.json();
+        console.log(storage);
+      };
+      
+      export { fetchUrl, url };
+      
