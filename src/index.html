@@ -20,29 +20,36 @@
       <div class="recent-scores">
         <div class="score-refresh">
           <h2>Recent scores</h2>
-          <button id="refresh btn btn-primary">Refresh</button>
+          <button id="refresh" class="btn btn-primary">Refresh</button>
         </div>
         <div class="name-board" id="name-board"></div>
       </div>
       <div class="add-scores">
-        <h2>Add your name</h2>
-        <form id="form" action="post">
-          <div>
-            <input type="text" placeholder="Your name" id="name" class="name" />
-          </div>
-          <div>
-            <input
-              type="text"
-              placeholder="Your score"
-              id="score"
-              class="score"
-            />
-          </div>
+        <div class="ctn-form">
+          <h2>Add your name</h2>
+          <form id="form" action="post">
+            <div>
+              <input
+                type="text"
+                placeholder="Your name"
+                id="name"
+                class="name"
+              />
+            </div>
+            <div>
+              <input
+                type="text"
+                placeholder="Your score"
+                id="score"
+                class="score"
+              />
+            </div>
 
-          <button type="submit" id="submit" class="btn btn-primary">
-            submit
-          </button>
-        </form>
+            <button type="submit" id="submit" class="btn btn-primary">
+              submit
+            </button>
+          </form>
+        </div>
       </div>
     </section>
   </body>
