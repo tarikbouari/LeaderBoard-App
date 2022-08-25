@@ -107,8 +107,10 @@ li {
 }
 
 form input {
-  width: 70%;
+  width: 90%;
   padding: 0.3rem;
+  border-radius: 0.5em;
+  border: none;
 }
 
 #refresh {

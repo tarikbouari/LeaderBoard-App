@@ -24,7 +24,7 @@ const getScore = async () => {
     const load = `<div class="flex">
                           
                           <li> ${item.user}: </li>
-                          <li> ${item.score}: </li>    
+                          <li> ${item.score} </li>    
                       <div>`;
 
     container.innerHTML += load;
