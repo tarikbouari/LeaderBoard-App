@@ -41,6 +41,9 @@
 
 $ npm start
 
+## Live demo
+[Click here](https://tarikbouari.github.io/LeaderBoard-App/)
+
 ## Authors
 
 👤 **Tarik Bouari **
