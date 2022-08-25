@@ -14,7 +14,7 @@ body {
   display: grid;
   padding: 1rem;
   grid-template-columns: 1fr 1fr;
-  width: 70%;
+  width: 100%;
   margin: 0 auto;
 }
 
