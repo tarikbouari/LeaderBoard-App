@@ -1,5 +1,5 @@
 import './style.css';
-import Scores from './functionalities.js';
+import { sendData, getScore } from './game.js';
 
 const refresh = document.getElementById('refresh');
 const submit = document.getElementById('submit');
@@ -8,35 +8,20 @@ const nameInput = document.getElementById('name');
 const form = document.getElementById('form');
 const scoreInput = document.getElementById('score');
 
-const renderScore = () => {
-  const data = JSON.parse(localStorage.getItem('data')) || [];
-
-  data.forEach((item) => {
-    const load = `<div class="flex"> 
-                        <h3> ${item.playerName}:<h3>
-                        <h3 class="child">${item.score}<h3>
-                    <div>`;
-
-    container.innerHTML += load;
-  });
-};
-renderScore();
-
 submit.addEventListener('click', (e) => {
   e.preventDefault();
-  const nameInpute = nameInput.value;
-  const scoreInpute = scoreInput.value;
-
-  if ((nameInpute && scoreInpute) === '') return 'value missing';
-
-  const newData = new Scores(nameInpute, scoreInpute);
-  newData.addScore();
-  container.innerHTML = '';
-  renderScore();
+  if ((nameInput.value && scoreInput.value) === '') return 'value missing';
+  sendData({
+    user: nameInput.value,
+    score: scoreInput.value,
+  });
   form.reset();
   return e;
 });
 
+getScore();
+
 refresh.addEventListener('click', () => {
-  document.location.reload();
+  container.innerHTML = '';
+  getScore();
 });
