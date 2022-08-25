@@ -6,8 +6,7 @@
 }
 
 body {
-  background-color: #151B5E;
-  padding: ;
+  background-color: #151b5e;
   overflow-y: hidden;
   color: #fff;
 }
@@ -28,6 +27,7 @@ header {
   padding: 4rem 3rem 0 3rem;
   margin: 0 auto;
 }
+
 header svg {
   width: 50px;
   height: 50px;
@@ -40,64 +40,58 @@ header svg {
   gap: 1rem;
   width: 100%;
   padding: 1rem;
-  background-color: ;
 }
 
 .score-refresh {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
-  background-image: linear-gradient(180deg, #606297, #12195A);
+  background-image: linear-gradient(180deg, #606297, #12195a);
   border-radius: 0.5rem;
-
 }
 
-
 .add-scores {
-
   display: flex;
   flex-direction: column;
   gap: 1rem;
   width: 100%;
   padding: 1rem;
-  
-}
-
-.ctn-form:hover {
-  box-shadow: 2px 2px 40px #dbdbdb38;
 }
 
 form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
- 
 }
+
 .ctn-form {
   padding: 1rem;
-  background-image: linear-gradient(180deg, #606297, #12195A);
+  background-image: linear-gradient(180deg, #606297, #12195a);
   border-radius: 0.5rem;
   transition: box-shadow 0.5s;
   cursor: pointer;
 }
+
+.ctn-form:hover {
+  box-shadow: 2px 2px 40px #dbdbdb38;
+}
+
 button {
   width: min-content;
-  padding: 0.3rem 1rem !important; 
+  padding: 0.3rem 1rem !important;
 }
 
 .flex {
   display: flex;
-  padding: 0.5rem;
-  background-image: linear-gradient(180deg, #606297, #6C709C); 
+  background-image: linear-gradient(180deg, #606297, #6c709c);
   padding: 1rem;
   gap: 3rem;
   margin: 0.5rem 0;
   border-radius: 0.5rem;
- 
 }
 
 .name-board {
-  border: 3px solid #DBDBDB;
+  border: 3px solid #dbdbdb;
   padding: 1rem;
   overflow: auto;
   height: 300px;
@@ -120,5 +114,5 @@ form input {
 
 #refresh {
   width: min-content;
-  padding: 0.1rem 1rem !important; 
+  padding: 0.1rem 1rem !important;
 }
