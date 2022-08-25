@@ -1,5 +1,5 @@
 import './style.css';
-import { sendData, getScore } from './game.js';
+import { sendData, getScore } from './modules/game.js';
 
 const refresh = document.getElementById('refresh');
 const submit = document.getElementById('submit');

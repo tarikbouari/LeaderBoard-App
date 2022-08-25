@@ -1,44 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-    <body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Learderboard</title>
+  </head>
+  <body>
+    <header>
 
-        <header>
-            <h1> Learderboard</h1>
-        </header>
-        <section class="scores">
-            <div class="recent-scores">
-                <div class="score-refresh">
-                    <h2> Recent scores</h2>
-                    <button id="refresh">Refresh</button>
-                </div>
-                <div class="name-board" id="name-board">
-
-
-                </div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 48 48"
+      >
+        <path
+          fill="#fff"
+          fill-rule="evenodd"
+          d="M12 7a1 1 0 0 1 1-1h22a1 1 0 0 1 1 1v1h5a1 1 0 0 1 1 1v6a5 5 0 0 1-5 5h-1.683A12.017 12.017 0 0 1 26 27.834V34h6a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H16a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1h6v-6.166A12.017 12.017 0 0 1 12.683 20H11a5 5 0 0 1-5-5V9a1 1 0 0 1 1-1h5V7Zm24 9v-6h4v5a3 3 0 0 1-3 3h-1v-2Zm-24-6H8v5a3 3 0 0 0 3 3h1v-8Z"
+          clip-rule="evenodd"
+        />
+      </svg>
+      <h1>Learderboard</h1>
+    </header>
+    <section class="scores">
+      <div class="recent-scores">
+        <div class="score-refresh">
+          <h2>Recent scores</h2>
+          <button id="refresh" class="btn btn-primary" type="button">Refresh</button>
+        </div>
+        <div class="name-board" id="name-board"></div>
+      </div>
+      <div class="add-scores">
+        <div class="ctn-form">
+          <h2 class="py-3">Add your name</h2>
+          <form id="form" action="post">
+            <div>
+              <input
+                type="text"
+                placeholder="Your name"
+                id="name"
+                class="name"
+              />
             </div>
-            <div class="add-scores">
-                <h2> Add your name</h2>
-                <form id="form" action="post">
-                    <div>
-                        <input type="text" placeholder="Your name" id="name"
-                            class="name">
-                    </div>
-                    <div>
-                        <input type="text" placeholder="Your score" id="score"
-                            class="score">
-                    </div>
-
-                    <button type="submit" id="submit"> submit</button>
-                </form>
-
+            <div>
+              <input
+                type="text"
+                placeholder="Your score"
+                id="score"
+                class="score"
+              />
             </div>
-        </section>
 
-    </body>
+            <button type="submit" id="submit" class="btn btn-primary">
+              submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>

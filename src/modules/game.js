@@ -20,8 +20,10 @@ const getScore = async () => {
   const storage = await res.json();
   const dataScores = storage.result;
   dataScores.forEach((item) => {
-    const load = `<div class="flex"> 
-                          <li> ${item.user}: ${item.score}</li>
+    const load = `<div class="flex">
+                          
+                          <li> ${item.user}: </li>
+                          <li> ${item.score} </li>    
                       <div>`;
 
     container.innerHTML += load;

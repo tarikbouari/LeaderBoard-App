@@ -4,8 +4,8 @@
 
 ## Description
 
-> This project is a web application thats displays and tracks the scores of players by loading
-> data from API
+> LeaderBoard is a web application thats displays and tracks the scores of players by loading
+> data from an API.
 
 ## Built With
 
