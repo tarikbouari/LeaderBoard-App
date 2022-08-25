@@ -13,7 +13,8 @@
 - VCS: GitBash
 - Package Manager: Node, NPM
 - Webpack
-  -Following github flows standards.
+- API
+- Following github flows standards.
 
 ## Setup
 
